@@ -1,0 +1,51 @@
+@use "_colors" as *;
+@use "_elements" as *;
+@use "_utils" as *;
+
+body {
+  font-size: 1.2rem;
+  font-family: "Open-sans", sans-serif;
+  background-color: $page-bg-color;
+}
+
+#start-btn,
+#play-again-btn {
+  @extend %button;
+  background-color: $secondary-color;
+}
+
+.question {
+  @extend %card;
+  margin: 1rem auto 1.2rem;
+  display: none;
+
+  h2 {
+    color: darken($secondary-color, 5%);
+  }
+}
+
+#counter {
+  color: $primary-color;
+  font-size: 1.6rem;
+}
+
+.timer {
+  @extend %sub-text;
+  text-align: right;
+}
+
+h1 {
+  @include h1($primary-color, dashed);
+}
+
+#start-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.start-end {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
