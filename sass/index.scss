@@ -8,7 +8,12 @@ body {
   background-color: $page-bg-color;
 }
 
-#start-btn,
+#start-btn {
+  @extend %button;
+  background-color: $secondary-color;
+  opacity: 0;
+}
+
 #play-again-btn {
   @extend %button;
   background-color: $secondary-color;

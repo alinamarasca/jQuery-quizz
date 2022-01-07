@@ -8,7 +8,7 @@ const countdown = time => {
     if (time == 0) {
       clearInterval(timer);
       showScore(game);
-      $("#quiz").remove();
+      // $("#quiz").fadeOut(1000);
     }
   }, 1000);
 };

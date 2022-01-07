@@ -1,5 +1,4 @@
-#start-btn,
-#play-again-btn {
+#start-btn, #play-again-btn {
   border: 0;
   color: #fff;
   text-transform: uppercase;
@@ -70,7 +69,11 @@ body {
   background-color: #f3eed9;
 }
 
-#start-btn,
+#start-btn {
+  background-color: #00985c;
+  opacity: 0;
+}
+
 #play-again-btn {
   background-color: #00985c;
   opacity: 0;

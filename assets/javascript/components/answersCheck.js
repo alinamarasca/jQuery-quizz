@@ -6,11 +6,8 @@ const answersCheck = e => {
   let questionId = e.target.name;
   let question = questions.find(item => item.id == questionId);
   if (question.correct === userAnswer) {
-    //game.correct
     game.correct++;
-  }
-  //game.incorrect
-  else {
+  } else {
     game.incorrect++;
   }
 };
