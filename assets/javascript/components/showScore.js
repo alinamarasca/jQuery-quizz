@@ -1,7 +1,7 @@
 import startQuiz from "./startQuiz.js";
 import questions from "../../data/questions.js";
 
-const endQuiz = state => {
+const showScore = state => {
   let { correct, incorrect } = state;
   $("#start-end")
     .append(
@@ -12,8 +12,9 @@ const endQuiz = state => {
   $("#play-again-btn").click(function () {
     $(this).remove();
     $("h2").remove();
+
     startQuiz(questions);
   });
 };
 
-export default endQuiz;
+export default showScore;

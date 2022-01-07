@@ -1,4 +1,4 @@
-import endQuiz from "./endQuiz.js";
+import showScore from "./showScore.js";
 import game from "../../data/state.js";
 
 const countdown = time => {
@@ -7,7 +7,7 @@ const countdown = time => {
     $("#counter").html(time);
     if (time == 0) {
       clearInterval(timer);
-      endQuiz(game);
+      showScore(game);
       $("#quiz").remove();
     }
   }, 1000);

@@ -3,6 +3,11 @@ import countdown from "./countdown.js";
 import game from "../../data/state.js";
 
 const startQuiz = array => {
+  //clean score
+
+  game.correct = 0;
+  game.incorrect = 0;
+
   //show questions
   $("#start-end").removeClass("start-end");
   $("#start-btn").remove();
