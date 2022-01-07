@@ -12,6 +12,7 @@ body {
 #play-again-btn {
   @extend %button;
   background-color: $secondary-color;
+  opacity: 0;
 }
 
 .question {
@@ -36,6 +37,8 @@ body {
 
 h1 {
   @include h1($primary-color, dashed);
+  display: none;
+  position: relative;
 }
 
 #start-end {

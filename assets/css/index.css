@@ -73,6 +73,7 @@ body {
 #start-btn,
 #play-again-btn {
   background-color: #00985c;
+  opacity: 0;
 }
 
 .question {
@@ -103,6 +104,8 @@ h1 {
   width: 8em;
   color: #cd5c5c;
   border: 3px dashed #cd5c5c;
+  display: none;
+  position: relative;
 }
 
 #start-end {

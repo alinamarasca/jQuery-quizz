@@ -9,6 +9,7 @@ const showScore = state => {
     )
     .addClass("start-end")
     .append("<button id='play-again-btn'>Start again</button>");
+
   $("#play-again-btn").click(function () {
     $(this).remove();
     $("h2").remove();
