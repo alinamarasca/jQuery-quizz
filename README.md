@@ -1,9 +1,16 @@
-# jQuery-quizz
+# jQuery-quiz
 
 Small SASS/jQuery project to practice using jQuery and SASS.<br>
 
-<h3>Main purposes:</h3>
+### Description
 
-* practice SASS & jQuery
-* understand how jQuery and JavaScript can work together
-* understand when would one use jQuery and when JavaScript
+Before the game starts, user sees how many questions there are in the quiz. He can set timer himself.
+When user clicks the "Start", the timer goes on.
+User will choose one answer out of 4.
+When the timer is off, user sees how many questions were answered correctly and how many incorrectly.
+
+### Main purposes:
+
+- practice SASS & jQuery
+- understand how jQuery and JavaScript can work together
+- understand when would one use jQuery and when JavaScript
