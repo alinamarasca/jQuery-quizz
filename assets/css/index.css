@@ -68,6 +68,14 @@ ul {
   margin: auto;
 }
 
+small {
+  opacity: 0.8;
+}
+
+span {
+  font-size: 1.6rem;
+}
+
 body {
   font-size: 1.2rem;
   font-family: "Open-sans", sans-serif;
@@ -113,7 +121,6 @@ body {
 
 span {
   color: #cd5c5c;
-  font-size: 1.6rem;
 }
 
 .timer {
@@ -143,6 +150,10 @@ h1 {
 }
 #start-end #results {
   color: #cd5c5c;
+}
+
+small {
+  color: #b87171;
 }
 
 /*# sourceMappingURL=index.css.map */
