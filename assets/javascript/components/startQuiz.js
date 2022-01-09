@@ -9,8 +9,10 @@ const startQuiz = array => {
   game.incorrect = 0;
 
   //show questions
-  $("#start-end").removeClass("start-end");
+  // $("#start-end").removeClass("start-end");
   $("#start-btn").remove();
+  $("#info").remove();
+
   $("#container").append($('<div id="quiz"></div>'));
   $("#quiz").prepend(
     `<h2 class="timer"> Time remaining: <span id="counter">${game.counter}</span> seconds</h2>`

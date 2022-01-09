@@ -8,12 +8,18 @@
   height: 50px;
   font-weight: 600;
   letter-spacing: 3px;
+
+  &:hover {
+    background: darken($secondary-color, 10%);
+    font-size: 1rem;
+  }
 }
 
 %card {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
   background-color: #fff;
+  margin: 1rem;
 }
 
 %sub-text {

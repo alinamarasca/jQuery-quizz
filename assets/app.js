@@ -1,41 +1,22 @@
 import startQuiz from "./javascript/components/startQuiz.js";
 import questions from "./data/questions.js";
 import btnAppear from "./javascript/components/btnAppear.js";
+import game from "./data/state.js";
 
 $(document).ready(function () {
   $("#container").append(
-    "<div id='start-end'class='start-end'><h1 id='header-quiz'>Silly Quiz</h1><button id='start-btn'>Start</button></div>"
+    `<div id='start-end'class='start-end'><h1 id='header-quiz'>Silly Quiz</h1><p id="info" class = 'info'>Hello there! We have <span>${questions.length} questions</span> in our 'Silly quiz'. <br> How much time do you need to answer them? <br><br><span><input id="user-time" type="number" name="user-time"></input> seconds.</span></p><button id='start-btn'>Start</button></div>`
   );
-  $("#header-quiz").fadeIn(1500, function () {
-    btnAppear("#start-btn");
-    // $("#start-btn").css({ opacity: "1" });
-    // $("#start-btn").animate({
-    //   width: 110,
-    //   height: 60
-    // });
-    // $("#start-btn").animate({
-    //   width: 100,
-    //   height: 50
-    // });
-  });
 
-  var box = $("#box2");
-  box.animate({
-    left: "300"
-  });
-  box.animate({
-    bottom: "300"
-  });
-  box.animate({
-    left: "0",
-    bottom: "300"
-  });
-  box.animate({
-    left: "0",
-    bottom: "0"
+  $("#header-quiz").fadeIn(1500, function () {
+    $("#info").slideDown(1000, function () {
+      btnAppear("#start-btn");
+    });
   });
 
   $("#start-btn").click(function () {
+    let input = $("input#user-time");
+    game.counter = input.val();
     $("#start-btn").remove();
     startQuiz(questions);
   });
