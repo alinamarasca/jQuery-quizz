@@ -28,14 +28,11 @@ li {
 }
 
 @mixin h1($color, $border-style) {
-  font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
-  margin: 2rem auto 0.8rem;
   font-weight: 800;
   border-radius: 40px;
-  padding: 1rem;
-  width: 8em;
+  padding: 1em;
   color: $color;
   border: 3px $border-style $color;
 }
