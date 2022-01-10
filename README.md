@@ -10,7 +10,7 @@ When user clicks the "Start", the timer goes on.
 User will choose one answer out of 4.
 When the timer is off, user sees how many questions were answered correctly and how many incorrectly.
 
-### Main purposes:
+### Main purposes
 
 - practice SASS & jQuery
 - understand how jQuery and JavaScript can work together

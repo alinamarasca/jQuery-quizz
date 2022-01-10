@@ -22,7 +22,6 @@ li {
   grid-template-areas: "i a";
 
   input {
-    grid-area: i;
     justify-self: baseline;
     align-self: center;
   }
@@ -58,6 +57,11 @@ ul {
 
 small {
   opacity: 0.8;
+  // display: table;
+}
+small::before {
+  content: "\A";
+  white-space: pre;
 }
 
 span {

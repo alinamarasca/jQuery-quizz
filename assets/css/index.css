@@ -48,7 +48,6 @@ li {
   grid-template-areas: "i a";
 }
 li input {
-  grid-area: i;
   justify-self: baseline;
   align-self: center;
 }
@@ -70,6 +69,11 @@ ul {
 
 small {
   opacity: 0.8;
+}
+
+small::before {
+  content: "\a";
+  white-space: pre;
 }
 
 span {
@@ -110,10 +114,16 @@ body {
   width: 4rem;
   font-size: 2rem;
   color: #00985c;
-  padding: 0.4rem;
+  padding: 1rem 0 0;
+  margin-right: 1.2rem;
   border: none;
   border-bottom: 2px solid #00985c;
   outline-color: #00985c;
+  vertical-align: text-bottom;
+}
+.info #user-time::before {
+  content: "\a";
+  white-space: pre;
 }
 .info span {
   color: #00985c;
@@ -154,6 +164,10 @@ h1 {
 
 small {
   color: #b87171;
+}
+
+li input {
+  grid-area: i;
 }
 
 /*# sourceMappingURL=index.css.map */

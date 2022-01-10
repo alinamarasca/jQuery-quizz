@@ -19,9 +19,7 @@ const showScore = state => {
       );
       btnAppear("#play-again-btn");
       $("#play-again-btn").click(function () {
-        $(this).remove();
-        $("#results").remove();
-        startQuiz(questions);
+        location.reload();
       });
     });
   });
