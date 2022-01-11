@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
   {
     question: "What is tomato?",
     answers: ["vegetable", "leafy greens", "berry", "taproot"],
