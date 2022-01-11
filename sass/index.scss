@@ -8,12 +8,24 @@ body {
   background-color: $page-bg-color;
 }
 
-#start-btn {
-  @extend %button;
-  background-color: $secondary-color;
-  opacity: 0;
+h1 {
+  @include h1($primary-color, dashed);
+  font-size: 1.6rem;
+  display: none;
+  position: relative;
+  margin: 2em auto 0.8em;
+  width: 8em;
 }
 
+small {
+  color: desaturate($primary-color, 20%);
+}
+
+span {
+  color: $primary-color;
+}
+
+#start-btn,
 #play-again-btn {
   @extend %button;
   background-color: $secondary-color;
@@ -21,15 +33,18 @@ body {
   margin-top: 1rem;
 }
 
-.question {
-  @extend %card;
-  margin: 1rem auto 1.2rem;
-  display: none;
+#start-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 
-  h2 {
-    color: darken($secondary-color, 5%);
+  #results {
+    @extend %card;
+    color: $primary-color;
   }
 }
+
 .info {
   @extend %card;
   text-align: center;
@@ -47,6 +62,7 @@ body {
     outline-color: $secondary-color;
     vertical-align: text-bottom;
   }
+
   #user-time::before {
     content: "\A";
     white-space: pre;
@@ -57,42 +73,60 @@ body {
   }
 }
 
-span {
-  color: $primary-color;
-}
-
 .timer {
   @extend %sub-text;
   text-align: right;
 }
 
-h1 {
-  @include h1($primary-color, dashed);
+.question {
+  @extend %card;
+  margin: 1rem auto 1.2rem;
   display: none;
   position: relative;
-}
+  max-width: 600px;
 
-#start-end {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
+  .question-header {
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: middle;
+    color: darken($secondary-color, 5%);
 
-  #results {
-    @extend %card;
-    color: $primary-color;
+    h2 {
+      margin: auto;
+    }
+  }
+
+  input {
+    grid-area: i;
   }
 }
 
-small {
-  color: desaturate($primary-color, 20%);
-}
+.hint {
+  h4 {
+    @include h1($primary-color, dashed);
+    font-size: 0.8rem;
+    justify-self: flex-end;
+    opacity: 0.4;
+    width: fit-content;
+    height: fit-content;
 
-li input {
-  grid-area: i;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  span {
+    @extend %card;
+    background-color: $secondary-color;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: none;
+    padding: 1em;
+    // max-width: 500px;
+    width: 400px;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+  }
 }
-// .start-end {
-//   position: absolute;
-//   top: 40%;
-//   left: 40%;
-// }
